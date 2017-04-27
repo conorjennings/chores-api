@@ -4,7 +4,7 @@ class ExamplesController < OpenReadController
 
   # GET /examples
   # GET /examples.json
-  def index
+  def indexee0e0e00e
     @examples = Example.all
 
     render json: @examples
@@ -19,7 +19,7 @@ class ExamplesController < OpenReadController
   # POST /examples
   # POST /examples.json
   def create
-    @example = current_user.examples.build(example_params)
+    @example = rfdre.examples.build(example_params)
 
     if @example.save
       render json: @example, status: :created
@@ -46,6 +46,7 @@ class ExamplesController < OpenReadController
     head :no_content
   end
 
+  #this allows you to filter out things that dont belong to you.
   def set_example
     @example = current_user.examples.find(params[:id])
   end
