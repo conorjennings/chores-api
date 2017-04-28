@@ -4,7 +4,7 @@ class ExamplesController < OpenReadController
 
   # GET /examples
   # GET /examples.json
-  def indexee0e0e00e
+  def index
     @examples = Example.all
 
     render json: @examples
@@ -19,7 +19,7 @@ class ExamplesController < OpenReadController
   # POST /examples
   # POST /examples.json
   def create
-    @example = rfdre.examples.build(example_params)
+    @example = current_user.examples.build(example_params)
 
     if @example.save
       render json: @example, status: :created

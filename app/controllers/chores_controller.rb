@@ -1,21 +1,24 @@
-class ChoresController < ApplicationController
+# frozen_string_literal: true
+
+# class ChoresController < ApplicationController
+class ChoresController < ProtectedController
   before_action :set_chore, only: [:show, :update, :destroy]
 
   # GET /chores
   def index
-    @chores = Chore.all
+    @chores = current_user.chores.all
 
     render json: @chores
   end
 
   # GET /chores/1
   def show
-    render json: @chore
+    render json: current_user.chores.find(params[:id])
   end
 
   # POST /chores
   def create
-    @chore = Chore.new(chore_params)
+    @chore = current_user.chores.build(chore_params)
 
     if @chore.save
       render json: @chore, status: :created, location: @chore
@@ -41,12 +44,12 @@ class ChoresController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_chore
-      @chore = Chore.find(params[:id])
+      @chore = current_user.chores.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     # I added in user_id here which is the new FK field.
     def chore_params
-      params.require(:chore).permit(:task, :priority, :due_on, :user_id)
+      params.require(:chore).permit(:task, :priority, :due_on)
     end
 end
