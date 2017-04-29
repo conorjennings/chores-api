@@ -27,17 +27,6 @@ class ChoresController < ProtectedController
     end
   end
 
-  # Update to existing Chore:
-  # PATCH/PUT /chores/1
-  # def update
-  #   if @chore.update(chore_params)
-  #     render json: @chore
-  #   else
-  #     render json: @chore.errors, status: :unprocessable_entity
-  #   end
-  # end
-
-
   def update
     @chore = Chore.find(params[:id])
 
