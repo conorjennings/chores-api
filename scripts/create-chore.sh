@@ -1,11 +1,23 @@
 
 curl --include --request POST http://localhost:4741/chores \
   --header "Content-Type: application/json" \
-  --header "Authorization: Token token=BAhJIiUzZDYxM2QxMzg1NDgxYzhjYzA0NmI2OGVkN2JkM2E0YgY6BkVG--9bae202d50811bc1df5d258a26fa6556fc71a1e3" \
+  --header "Authorization: Token token=BAhJIiVjZTVjODcxZmVmNTNmMTM2NmRkNTQ3Y2QyYzg3OWY4NAY6BkVG--ff83c1aa2f52ca1f9e8b663c486814f09de96ede" \
   --data '{
     "chore": {
-      "task": "Clean the dog  box",
-      "priority": 1,
+      "task": "Cut the grass",
+      "priority": 2,
       "due_on": "2017-07-22"
     }
   }'
+
+
+  curl --include --request POST http://localhost:4741/chores \
+    --header "Content-Type: application/json" \
+    --header "Authorization: Token token=BAhJIiVjZTVjODcxZmVmNTNmMTM2NmRkNTQ3Y2QyYzg3OWY4NAY6BkVG--ff83c1aa2f52ca1f9e8b663c486814f09de96ede" \
+    --data '{
+      "chore": {
+        "task": "Sweep the drive way",
+        "priority": 2,
+        "due_on": "2017-07-23"
+      }
+    }'

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# class ChoresController < ApplicationController
 class ChoresController < ProtectedController
   before_action :set_chore, only: [:show, :update, :destroy]
 
@@ -31,7 +30,8 @@ class ChoresController < ProtectedController
     @chore = Chore.find(params[:id])
 
     if @chore.update(chore_params)
-      render json: @chore, status: :ok
+      head :no_content
+      # render json: @chore, status: :ok
     else
       render json: @chore.errors, status: :unprocessable_entity
     end
@@ -51,6 +51,6 @@ class ChoresController < ProtectedController
     # Only allow a trusted parameter "white list" through.
     # I added in user_id here which is the new FK field.
     def chore_params
-      params.require(:chore).permit(:task, :priority, :due_on)
+      params.require(:chore).permit(:task, :priority, :due_on, :user_id)
     end
 end
