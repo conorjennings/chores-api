@@ -1,3 +1,14 @@
   curl --include --request GET http://localhost:4741/chores \
     --header "Content-Type: application/json" \
-    --header "Authorization: Token token=BAhJIiU2NWNmYzNlNWFhYWE0OGExYWZiMjg0NWYxZTcyNGQ0NgY6BkVG--29f5d76c3e3a81c0ac961110e0dbca5bd6f61450" \
+    --header "Authorization: Token token=842405ac71e76231961660b1822a2c6b" \
+
+
+# GET ONE ITEM BACK FOR id 28
+    curl --include --request GET http://localhost:4741/chores/28 \
+      --header "Content-Type: application/json" \
+      --header "Authorization: Token token=BAhJIiVkOTIzN2QyNGIyNDA1YjE3ZjVkYzI2Nzk4M2ZjZDFkZQY6BkVG--dac779e1a4383558c8ddace7567aa73dc8dc9b58" \
+
+      # GET ONE ITEM BACK FOR id 28
+          curl --include --request GET http://localhost:4741/chores/?priority=2 \
+            --header "Content-Type: application/json" \
+            --header "Authorization: Token token=BAhJIiVkOTIzN2QyNGIyNDA1YjE3ZjVkYzI2Nzk4M2ZjZDFkZQY6BkVG--dac779e1a4383558c8ddace7567aa73dc8dc9b58" \

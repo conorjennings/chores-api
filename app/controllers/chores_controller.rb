@@ -5,12 +5,14 @@ class ChoresController < ProtectedController
 
   # GET /chores
   def index
+    # How can i write a IF statement to use line 9 or line 10:
     @chores = current_user.chores.all
-
+    @chores = current_user.chores.find_by priority: params[:priority]
     render json: @chores
   end
 
   # GET /chores/1
+  # find always looks for the ID attribute!
   def show
     render json: current_user.chores.find(params[:id])
   end
