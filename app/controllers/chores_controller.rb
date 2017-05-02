@@ -7,7 +7,7 @@ class ChoresController < ProtectedController
   def index
     # How can i write a IF statement to use line 9 or line 10:
     @chores = current_user.chores.all
-    @chores = current_user.chores.find_by priority: params[:priority]
+    # Danny's help: @chores = current_user.chores.find_by priority: params[:priority]
     render json: @chores
   end
 
