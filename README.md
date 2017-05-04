@@ -10,10 +10,11 @@ user could also update, delete existing items as well as see  all items in their
 
 
 ## Github and Heroku Repos:
-Gihub:
+Gihub BACKEND REPO:
 https://github.com/conorjennings/chores-api
 
-Heroku: https://dashboard.heroku.com/apps/dry-hollows-40181
+Heroku BACKEND DEPLOYED:
+https://dry-hollows-40181.herokuapp.com/
 
 
 #ERD:
