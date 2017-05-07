@@ -16,6 +16,11 @@ https://github.com/conorjennings/chores-api
 Heroku BACKEND DEPLOYED:
 https://dry-hollows-40181.herokuapp.com/
 
+FRONTEND REPO:
+https://github.com/conorjennings/chores
+
+FRONTEND DEPLOYED
+https://conorjennings.github.io/chores/
 
 #ERD:
 http://imgur.com/a/8jHLu
@@ -54,7 +59,7 @@ http://imgur.com/8IiVqyz
 ## [CuRL]
 All CURL scripts for user and for chores controller are found here:
 
-/Users/conor/wdi/projects/chores-server/scripts
+</Users/conor/wdi/projects/chores-server/scripts>
 
 
 ## [Heroku]
@@ -62,4 +67,5 @@ Heroku: https://dashboard.heroku.com/apps/dry-hollows-40181
 
 ## Challenges.
 1) Not having sufficient knowledge of Rails to wade into deeper terretory to be able to run different types of queries rather than just a SELECT * or a SELECT * for one user ID. Opened an issue on this but ran out of time to try to implement it. https://github.com/ga-wdi-boston/full-stack-project/issues/773
+
 2) Learning more about handlebars for the next project is a personal goal of mine.
