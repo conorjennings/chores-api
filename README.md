@@ -14,7 +14,7 @@ A user first creates an account and then gets access to add items to their to do
 
 ## API Overview
 
-I scaffolded a chores and user ratings MVC. The only modification I did was in the serializer to allow me to determine how many days were left for a given chore based on due date - today's date.
+I scaffolded a chores and user MVC. The only modification I did was in the serializer to allow me to determine how many days were left for a given chore based on due date - today's date. In addition, I used the serializer to build out some logic to convert priority from an integer to an alpha value that was then displayed on the front end.
 
 
 
@@ -71,7 +71,7 @@ No third party APIs were used.
 ## [CuRL]
 All CURL scripts for user and for chores controller are found here:
 
-</Users/conor/wdi/projects/chores-server/scripts>
+[/Users/conor/wdi/projects/chores-server/scripts]
 
 
 ## [Heroku]
