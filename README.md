@@ -8,6 +8,15 @@ an account, sign in, change password and sign out. Once signed in, the user
 can then add new 'to do' items giving description, due date and priority. The
 user could also update, delete existing items as well as see  all items in their list.
 
+## How does it work?
+
+A user first creates an account and then gets access to add items to their to do list. They can update the list and delete items in the list. Additionally, they can add to do items and view all their items in the list.
+
+## API Overview
+
+I scaffolded a chores and user ratings MVC. The only modification I did was in the serializer to allow me to determine how many days were left for a given chore based on due date - today's date.
+
+
 
 ## Github and Heroku Repos:
 Gihub BACKEND REPO:
@@ -22,13 +31,16 @@ https://github.com/conorjennings/chores
 FRONTEND DEPLOYED
 https://conorjennings.github.io/chores/
 
-#ERD:
+##ERD:
 http://imgur.com/a/8jHLu
 
 
 ## Wireframe:
 http://imgur.com/8IiVqyz
 
+## 3rd Party APIs
+Do you plan to use any, if so what are they?
+No third party APIs were used.
 
 
 ## API
