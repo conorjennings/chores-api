@@ -7,7 +7,8 @@ class ChoresController < ProtectedController
   def index
     # How can i write a IF statement to use line 9 or line 10:
     @chores = current_user.chores.all
-    # Danny's help: @chores = current_user.chores.find_by priority: params[:priority]
+    # Danny's help:
+    # @chores = current_user.chores.find_by priority: params[:priority]
     render json: @chores
   end
 
@@ -45,14 +46,15 @@ class ChoresController < ProtectedController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_chore
-      @chore = current_user.chores.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    # I added in user_id here which is the new FK field.
-    def chore_params
-      params.require(:chore).permit(:task, :priority, :due_on, :user_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_chore
+    @chore = current_user.chores.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  # I added in user_id here which is the new FK field.
+  def chore_params
+    params.require(:chore).permit(:task, :priority, :due_on, :user_id)
+  end
 end
